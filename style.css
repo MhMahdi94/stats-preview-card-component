@@ -5,16 +5,21 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 main{
-    width: 780px;
+    max-width: 760px;
     position:absolute;
     top: 20%;
+    bottom: 20%;
 
 }
 .sec1{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sec2{
@@ -37,7 +42,6 @@ main{
     height: 100%;
     border-radius: 0 8px 8px 0;
 }
-
 
 
 section{
@@ -67,17 +71,15 @@ p{
 
 .stats{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 400px;
     /* padding: 16px; */
 }
 
 .stats div{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-right: 50px;
-    margin-top: 30px;
+    /* justify-content: space-between; */
+    margin: 10px;
     color: hsl(0, 0%, 100%);
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 700;
@@ -86,13 +88,13 @@ p{
 .label{
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 10px;
     opacity: 0.5;
 }
 
 @media only screen and (max-width: 375px) {
     main {
-      width: 320px;
+        width: 80%;
+        text-align: center;
     }
     section{
         flex-direction: column-reverse;
@@ -121,5 +123,41 @@ p{
     .stats{
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    main {
+        width: 80%;
+        text-align: center;
+    }
+    section{
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .sec1{
+        width: 100%;
+        padding: 16px;
+        
+    }
+
+    .sec2{
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .stats{
+        justify-content: center;
+        width: 100%;
     }
 }
